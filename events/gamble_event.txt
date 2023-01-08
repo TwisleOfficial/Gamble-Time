@@ -1,0 +1,337 @@
+namespace = gamble_general_event
+
+gamble_general_event.0001 = { # gamble
+	type = character_event
+	title = gamble_general_event.0001.t
+	desc = gamble_general_event.0001.desc
+
+	override_background = tavern
+	override_icon = {
+		reference = "gfx\interface\icons\event_types\frame_gamble.dds" 
+	}
+
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		character = scope:portrait_2
+		animation = anger
+	}
+
+	trigger = {
+		is_adult = yes
+		is_at_war = no
+		is_in_an_activity = no
+
+		portrait_2 = {
+			is_adult = yes
+			is_at_war = no
+			is_in_an_activity = no
+		}
+	
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_variable = good_gamble_counter }
+				NOT = { has_variable = bad_gamble_counter }
+			}
+			set_variable = {
+				name = good_gamble_counter
+				value = 0
+			}
+			set_variable = {
+				name = bad_gamble_counter
+				value = 0
+			}
+		}
+
+		random_courtier = {
+			save_scope_as = portrait_2
+		}
+
+	}
+
+	option = { # 10 wager
+		name = gamble_general_event.0001.a
+		custom_tooltip = gamble_general_event.0001.a_tt
+		trigger = {
+			is_adult = yes
+		}
+		remove_short_term_gold = 10
+		random_list = {
+			50 = { # winning
+				trigger_event = { id = gamble_general_event.0005 }
+				trigger_event = { id = gamble_general_event.0002 }
+				add_gold = 20
+				add_stress = -10
+				
+			}
+			50 = { # losing
+				trigger_event = { id = gamble_general_event.0004 }
+				custom_tooltip = gamble_general_event.0001.b_ttt
+				trigger_event = { id = gamble_general_event.0003 }
+
+				add_stress = 10
+			}
+		}
+	}
+
+	option = { # 50 wager
+		name = gamble_general_event.0001.b
+		custom_tooltip = gamble_general_event.0001.b_tt
+		trigger = {
+			is_adult = yes
+		}
+		remove_short_term_gold = 50
+		random_list = {
+			50 = { # winning
+				trigger_event = { id = gamble_general_event.0005 }
+				trigger_event = { id = gamble_general_event.0002 }
+
+				add_gold = 100
+				add_stress = -50
+			}
+			50 = { # lossing
+				trigger_event = { id = gamble_general_event.0004 }			
+				trigger_event = { id = gamble_general_event.0003 }
+				custom_tooltip = gamble_general_event.0001.b_ttt
+				add_stress = 50
+			}
+		}
+	}
+
+	option = { # 100 wager
+		name = gamble_general_event.0001.c
+		custom_tooltip = gamble_general_event.0001.c_tt
+		trigger = {
+			is_adult = yes
+		}
+		remove_short_term_gold = 100
+		random_list = {
+			50 = { # winning
+				trigger_event = { id = gamble_general_event.0005 }
+				trigger_event = { id = gamble_general_event.0002 }
+				add_gold = 200
+				add_stress = -100
+			}
+			50 = { # lossing
+				trigger_event = { id = gamble_general_event.0004 }
+				trigger_event = { id = gamble_general_event.0003 }
+				custom_tooltip = gamble_general_event.0001.b_ttt
+				add_stress = 100
+			}
+		}
+	}
+
+	option = {
+		name = gamble_general_event.0001.d
+		custom_tooltip = gamble_general_event.0001.d_tt
+		trigger = {
+			is_adult = yes
+		}
+		trigger_event = { id = gamble_general_event.0006 }
+		trigger_event = { id = gamble_general_event.0007 }
+	}
+
+}
+
+gamble_general_event.0002 = { # player win
+	type = character_event
+	title = gamble_general_event.0002.t
+	desc = gamble_general_event.0002.desc
+
+	override_background = tavern
+	override_icon = {
+		reference = "gfx\interface\icons\event_types\frame_gamble.dds" 
+	}
+
+	left_portrait = {
+		character = root
+		animation = war_over_win
+	}
+	right_portrait = {
+		character = scope:portrait_2
+		animation = anger
+	}
+
+	trigger = {
+		is_adult = yes
+		is_at_war = no
+		is_in_an_activity = no
+
+		portrait_2 = {
+			is_adult = yes
+			is_at_war = no
+			is_in_an_activity = no
+		}
+	
+	}
+
+	option = {
+		name = gamble_general_event.0002.a
+		custom_tooltip = gamble_general_event.0002.a_tt
+		trigger = {
+			is_adult = yes
+		}
+		trigger_event = { id = gamble_general_event.0001 }
+	}
+	option = {
+		name = gamble_general_event.0002.b
+		custom_tooltip = gamble_general_event.0002.b_tt
+		trigger = {
+			is_adult = yes
+		}
+		trigger_event = { id = gamble_general_event.0006 }
+		trigger_event = { id = gamble_general_event.0007 }
+	}
+}
+
+gamble_general_event.0003 = { # player loss
+	type = character_event
+	title = gamble_general_event.0003.t
+	desc = gamble_general_event.0003.desc
+
+	override_background = tavern
+	override_icon = {
+		reference = "gfx\interface\icons\event_types\frame_gamble.dds" 
+	}
+
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		character = scope:portrait_2
+		animation = war_over_win
+	}
+
+	trigger = {
+		is_adult = yes
+		is_at_war = no
+		is_in_an_activity = no
+
+		portrait_2 = {
+			is_adult = yes
+			is_at_war = no
+			is_in_an_activity = no
+		}
+	
+	}
+
+	option = {
+		name = gamble_general_event.0003.a
+		custom_tooltip = gamble_general_event.0003.a_tt
+		trigger = {
+			is_adult = yes
+		}
+		trigger_event = { id = gamble_general_event.0001 }
+	}
+	option = {
+		name = gamble_general_event.0003.b
+		custom_tooltip = gamble_general_event.0003.b_tt
+		trigger = {
+			is_adult = yes
+		}
+		trigger_event = { id = gamble_general_event.0006 }
+		trigger_event = { id = gamble_general_event.0007 }
+	}
+}
+
+gamble_general_event.0004 = { # bad counter
+	hidden = yes
+
+	trigger = {
+		NOT = {has_trait = bad_gambler}
+	}
+
+	immediate = {
+		change_variable = {
+			name = bad_gamble_counter
+			add = 1
+		}
+	}
+}
+
+gamble_general_event.0005 = { # good counter
+	hidden = yes
+
+	trigger = {
+		NOT = {has_trait = good_gambler}
+	}
+
+	immediate = {
+		change_variable = {
+			name = good_gamble_counter
+			add = 1
+		}
+	}
+}
+
+gamble_general_event.0006 = { # give good trait
+
+	left_portrait = {
+		character = root
+		animation = happy
+	}
+
+	type = character_event
+	title = gamble_general_event.0006.t
+	desc = gamble_general_event.0006.d
+
+	override_background = tavern
+	override_icon = {
+		reference = "gfx\interface\icons\event_types\frame_gamble.dds" 
+	}
+
+	trigger = {
+		has_variable = good_gamble_counter
+		var:good_gamble_counter >= 50
+		NOT = { has_trait = bad_gambler }
+		NOT = { has_trait = good_gambler }
+	}
+
+	option = {
+		name = gamble_general_event.0006.a
+		custom_tooltip = gamble_general_event.0006.a_tt
+		trigger = {
+			is_adult = yes
+		}
+		add_trait = good_gambler
+	}
+}
+
+gamble_general_event.0007 = { # give bad trait
+
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+
+	type = character_event
+	title = gamble_general_event.0007.t
+	desc = gamble_general_event.0007.d
+
+	override_background = tavern
+	override_icon = {
+		reference = "gfx\interface\icons\event_types\frame_gamble.dds" 
+	}
+
+	trigger = {
+		has_variable = bad_gamble_counter
+		var:bad_gamble_counter >= 50
+		NOT = { has_trait = bad_gambler }
+		NOT = { has_trait = good_gambler }
+	}
+
+	option = {
+		name = gamble_general_event.0007.a
+		custom_tooltip = gamble_general_event.0007.a_tt
+		trigger = {
+			is_adult = yes
+		}
+		add_trait = bad_gambler
+	}
+}

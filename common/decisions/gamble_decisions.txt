@@ -1,0 +1,25 @@
+﻿gamble_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	title = gamble_decision_desc_title
+	desc = gamble_decision_desc
+	selection_tooltip = gamble_decision_tooltip
+
+	
+	ai_check_interval = 120
+
+	cooldown = { days = 1 }
+
+	is_shown = {
+		is_ruler = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available = yes
+	}
+
+	effect = {
+		cost = 50
+		trigger_event = { id = gamble_general_event.0001 }
+		custom_tooltip = gamble_decision_effect_tooltip
+	}
+}

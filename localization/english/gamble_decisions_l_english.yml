@@ -1,0 +1,6 @@
+﻿l_english:
+ gamble_decision_desc_title:0 "Time To Gamble"
+ gamble_decision_desc:0 "Will luck be on your side today [ROOT.GetCharacter.GetFirstNameNoTooltip] ?"
+ gamble_decision_effect_tooltip:0 "Will you take on the odds to win a fourtune? Are you willing to empty your coffers just for a little coin?"
+ gamble_decision_tooltip:0 "Hope you wont empty your coffers"
+ gamble_decision_confirm:0 "To The Tavern I Go"

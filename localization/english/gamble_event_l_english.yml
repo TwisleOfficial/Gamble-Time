@@ -1,0 +1,42 @@
+﻿l_english:
+ gamble_general_event.0001.t:0 "The Wager Of all Time"
+ gamble_general_event.0001.desc:0 "I am [portrait_2.GetTitledFirstName] the god of gambling. I have not lost in a many of years. You think you could beat me? You are mistaken."
+
+ gamble_general_event.0001.a:0 "I wager 10 gold !"
+ gamble_general_event.0001.a_tt:0 "10 gold down the drain or maybe not..."
+
+ gamble_general_event.0001.b:0 "I wager 50 gold !"
+ gamble_general_event.0001.b_tt:0 "50 gold down the drain or maybe not..."
+ gamble_general_event.0001.b_ttt:0 "You loss"
+
+ gamble_general_event.0001.c:0 "I wager 100 gold !"
+ gamble_general_event.0001.c_tt:0 "100 gold down the drain or maybe not..."
+ gamble_general_event.0001.c_ttt:0 "You loss"
+
+ gamble_general_event.0001.d:0 "I am a coward I forfeit..."
+ gamble_general_event.0001.d_tt:0 "Loser !"
+
+ gamble_general_event.0002.t:0 "I win you lose [portrait_2.GetTitledFirstName]!"
+ gamble_general_event.0002.desc:0 "You Lose [portrait_2.GetTitledFirstName]! Looks like you are not the god of gambling after all..."
+
+ gamble_general_event.0002.a:0 "I think I want to play another hand..."
+ gamble_general_event.0002.a_tt:0 "Again I might win..."
+ gamble_general_event.0002.b:0 "You are a waste of time [portrait_2.GetTitledFirstName] goodbye."
+ gamble_general_event.0002.b_tt:0 "Waste of time."
+
+ gamble_general_event.0003.t:0 "You win [portrait_2.GetTitledFirstName]!"
+ gamble_general_event.0003.desc:0 "[portrait_2.GetTitledFirstName] Looks like you are the god of gambling after all..."
+ gamble_general_event.0003.a:0 "I think I want to play another hand..."
+ gamble_general_event.0003.a_tt:0 "I will win next time !"
+ gamble_general_event.0003.b:0 "I am a losser. How could I lose?"
+ gamble_general_event.0003.b_tt:0 "Waste of time."
+
+ gamble_general_event.0006.t:0 "The Gambler of All Time"
+ gamble_general_event.0006.d:0 "You gained a lot of money..."
+ gamble_general_event.0006.a:0 "Here is a metal of honor."
+ gamble_general_event.0006.a_tt:0 "Good Gambler"
+
+ gamble_general_event.0007.t:0 "The Worlds Worst Gambler"
+ gamble_general_event.0007.d:0 "You  wasted a lot of money..."
+ gamble_general_event.0007.a:0 "Here is a metal of honor."
+ gamble_general_event.0007.a_tt:0 "Bad Gambler"

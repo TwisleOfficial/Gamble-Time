@@ -1,0 +1,41 @@
+﻿bad_gambler = {
+	fame = yes
+	same_opinion = 10
+
+	monthly_prestige = -1
+	monthly_income_mult = -0.05
+
+	ruler_designer_cost = 0
+
+	opposite_opinion = -10
+    opposites = {
+		good_gambler
+    }
+
+	name = trait_bad_gambler
+	desc = trait_bad_gambler_desc
+
+	shown_in_ruler_designer = yes
+}
+
+good_gambler = {
+	fame = yes
+	same_opinion = 10
+
+	monthly_prestige = 1
+
+	monthly_income_mult = 0.05
+	monthly_income_per_stress_level_mult = 0.1
+
+	ruler_designer_cost = 0
+
+    opposite_opinion = -10
+    opposites = {
+		bad_gambler
+    }
+
+	name = trait_good_gambler
+	desc = trait_good_gambler_desc
+
+	shown_in_ruler_designer = yes
+}
