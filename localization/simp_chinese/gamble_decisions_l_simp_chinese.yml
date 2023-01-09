@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+gamble_decision_desc_title:0 "赌博时间"
+gamble_decision_desc:0 "今天运气会站在你这边吗 [ROOT.GetCharacter.GetFirstNameNoTooltip]？"
+gamble_decision_effect_tooltip:0 "你要冒险赢得财富吗？你愿意为了一个小硬币掏空你的金库吗？"
+gamble_decision_tooltip:0 "希望你不会掏空你的金库"
+gamble_decision_confirm:0 "去酒馆吧"
