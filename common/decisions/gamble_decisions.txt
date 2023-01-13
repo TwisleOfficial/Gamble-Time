@@ -1,5 +1,5 @@
 ﻿gamble_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_gamble.dds"
 	title = gamble_decision_desc_title
 	desc = gamble_decision_desc
 	selection_tooltip = gamble_decision_tooltip
